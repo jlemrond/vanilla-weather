@@ -2,6 +2,11 @@
 
 const patterns = require('../patterns');
 
+let createEntities = (str, pattern) => {
+    let regex = new RegExp(pattern, 'i');
+    return regex.exec(str);
+}
+
 let matchPattern = (input, callback) => {
 
     let getResult = patterns.find(item => {
@@ -14,7 +19,8 @@ let matchPattern = (input, callback) => {
 
     if (getResult) {
         return callback({
-            intent: getResult.intent
+            intent: getResult.intent,
+            entities: createEntities(input, getResult.pattern)
         })
     } else {
         return callback({});

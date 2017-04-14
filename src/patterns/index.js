@@ -5,6 +5,9 @@ const patternDictionary = [
     }, {
         pattern: '\\b(bye|exit)\\b',
         intent: 'exit'
+    }, {
+        pattern: '\\blike\\sin\\s\\b(.+)',
+        intent: 'currentWeather'
     }
 ]
 

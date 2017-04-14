@@ -14,15 +14,18 @@ rl.prompt();
 rl.on('line', reply => {
 
     matcher(reply, data => {
-        console.log(data);
         switch (data.intent) {
             case "hello":
-                console.log("Why hello there");
+                console.log(`${data.entities[1]} there.`);
                 rl.prompt();
                 break;
             case "exit":
                 console.log("Bye Bye Now");
                 process.exit(0);
+                break;
+            case "currentWeather":
+                console.log(`Let me check....`);
+                rl.prompt();
                 break;
             default:
                 console.log("What now?!?!");
