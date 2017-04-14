@@ -1,0 +1,176 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2017-04-14T22:10:20Z",
+  "lang": "en-US",
+  "diagnostics": {
+   "publiclyCallable": "true",
+   "url": [
+    {
+     "execution-start-time": "1",
+     "execution-stop-time": "5",
+     "execution-time": "4",
+     "content": "http://unifiedgeo.geotech.yahoo.com:4080/geo/v1/geocode?q=orlando&start=0&size=1&optionalfields=woe.ancestors&minconfidence=0.0001"
+    },
+    {
+     "execution-start-time": "7",
+     "execution-stop-time": "13",
+     "execution-time": "6",
+     "content": "http://weather-ydn-yql.media.yahoo.com:4080/v3/public/weather/rss?u=c&w=2466256"
+    }
+   ],
+   "javascript": {
+    "execution-start-time": "0",
+    "execution-stop-time": "7",
+    "execution-time": "6",
+    "instructions-used": "15701",
+    "table-name": "geo.places"
+   },
+   "user-time": "15",
+   "service-time": "10",
+   "build-version": "2.0.84"
+  },
+  "results": {
+   "channel": {
+    "units": {
+     "distance": "km",
+     "pressure": "mb",
+     "speed": "km/h",
+     "temperature": "C"
+    },
+    "title": "Yahoo! Weather - Orlando, FL, US",
+    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2466256/",
+    "description": "Yahoo! Weather for Orlando, FL, US",
+    "language": "en-us",
+    "lastBuildDate": "Fri, 14 Apr 2017 06:10 PM EDT",
+    "ttl": "60",
+    "location": {
+     "city": "Orlando",
+     "country": "United States",
+     "region": " FL"
+    },
+    "wind": {
+     "chill": "82",
+     "direction": "65",
+     "speed": "40.23"
+    },
+    "atmosphere": {
+     "humidity": "40",
+     "pressure": "34439.59",
+     "rising": "0",
+     "visibility": "25.91"
+    },
+    "astronomy": {
+     "sunrise": "7:1 am",
+     "sunset": "7:51 pm"
+    },
+    "image": {
+     "title": "Yahoo! Weather",
+     "width": "142",
+     "height": "18",
+     "link": "http://weather.yahoo.com",
+     "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+    },
+    "item": {
+     "title": "Conditions for Orlando, FL, US at 04:00 PM EDT",
+     "lat": "28.479321",
+     "long": "-81.344292",
+     "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2466256/",
+     "pubDate": "Fri, 14 Apr 2017 04:00 PM EDT",
+     "condition": {
+      "code": "23",
+      "date": "Fri, 14 Apr 2017 04:00 PM EDT",
+      "temp": "27",
+      "text": "Breezy"
+     },
+     "forecast": [
+      {
+       "code": "30",
+       "date": "14 Apr 2017",
+       "day": "Fri",
+       "high": "27",
+       "low": "17",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "28",
+       "date": "15 Apr 2017",
+       "day": "Sat",
+       "high": "27",
+       "low": "18",
+       "text": "Mostly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "16 Apr 2017",
+       "day": "Sun",
+       "high": "28",
+       "low": "18",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "17 Apr 2017",
+       "day": "Mon",
+       "high": "29",
+       "low": "16",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "18 Apr 2017",
+       "day": "Tue",
+       "high": "29",
+       "low": "17",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "19 Apr 2017",
+       "day": "Wed",
+       "high": "29",
+       "low": "18",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "34",
+       "date": "20 Apr 2017",
+       "day": "Thu",
+       "high": "30",
+       "low": "19",
+       "text": "Mostly Sunny"
+      },
+      {
+       "code": "34",
+       "date": "21 Apr 2017",
+       "day": "Fri",
+       "high": "30",
+       "low": "19",
+       "text": "Mostly Sunny"
+      },
+      {
+       "code": "30",
+       "date": "22 Apr 2017",
+       "day": "Sat",
+       "high": "30",
+       "low": "19",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "23 Apr 2017",
+       "day": "Sun",
+       "high": "29",
+       "low": "20",
+       "text": "Partly Cloudy"
+      }
+     ],
+     "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/23.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Breezy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Fri - Partly Cloudy. High: 27Low: 17\n<BR /> Sat - Mostly Cloudy. High: 27Low: 18\n<BR /> Sun - Partly Cloudy. High: 28Low: 18\n<BR /> Mon - Partly Cloudy. High: 29Low: 16\n<BR /> Tue - Partly Cloudy. High: 29Low: 17\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2466256/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+     "guid": {
+      "isPermaLink": "false"
+     }
+    }
+   }
+  }
+ }
+}
