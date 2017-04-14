@@ -1,6 +1,7 @@
 "use strict";
 
 const colors = require('colors');
+const dictionary = require('./dictionary');
 
 let getFeel = (temp) => {
 
@@ -17,6 +18,17 @@ let getFeel = (temp) => {
     } else {
         return "fucking hot yo";
     }
+
+}
+
+let getPrefix = (conditionCode, tense = "present") => {
+    let findPrefix = dictionary[tense].find(item => {
+        if (item.codes.indexOf(Number(conditionCode)) > -1) {
+            return true;
+        }
+    });
+
+    return findPrefix.prefix || "";
 }
 
 let currentWeather = response => {
@@ -24,9 +36,9 @@ let currentWeather = response => {
     if (response.query.results) {
         let channel = response.query.results.channel;
         let location = `${channel.location.city}, ${channel.location.country}`;
-        let {text, temp} = channel.item.condition;
+        let {text, temp, code} = channel.item.condition;
 
-        return `Right now, it is ${text.toLowerCase().red.bold} in ${location.bold}.  It is ${getFeel(temp).green.bold} at ${temp.red.bold} degrees Celcius.`;
+        return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}.  It is ${getFeel(temp).green.bold} at ${temp.red.bold} degrees Celcius.`;
     }
 
 }
