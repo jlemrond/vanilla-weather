@@ -1,0 +1,14 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "Vanilla Command Line Chat Bot",
+  "main": "src/app.js",
+  "author": "Jason Lemrond <jason.lemrond@icloud.com>",
+  "license": "MIT",
+  "scripts": {
+    "go": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
