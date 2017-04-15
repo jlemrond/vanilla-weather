@@ -6,6 +6,7 @@
   "author": "Jason Lemrond <jason.lemrond@icloud.com>",
   "license": "MIT",
   "scripts": {
+    "run": "node src/app.js",
     "go": "nodemon src/app.js"
   },
   "dependencies": {
