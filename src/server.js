@@ -6,14 +6,28 @@ const server = Restify.createServer({
 });
 const PORT = process.env.PORT || 3000;
 
+server.use(Restify.jsonp());
+server.use(Restify.bodyParser());
+
 // Tokens / Keys
 const config = require('./config');
 
+// FBeamer
+const FBeamer = require('./fbeamer');
+const fb = new FBeamer(config);
 
-// Test
+
+// Register the webhook
 server.get('/', (request, response, next) => {
-     response.send("Hello");
-     return next();
+    fb.registerHook(request, response);
+    return next();
+});
+
+// Recieving Post Requests
+server.post('/', (request, response, next) => {
+    fb.incoming(request, response, msg => {
+        console.log(msg);
+    })
 });
 
 server.listen(PORT, () => console.log(`Vanilla running on port: ${PORT}`));
