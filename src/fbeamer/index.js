@@ -41,7 +41,7 @@ class FBeamer {
 
         if (mode === "subscribe" && verify_token === this.VERIFY_TOKEN) {
             console.log("App Registered with Facebook.");
-            return response.send(parseInt(challenge));
+            return response.end(challenge);
         } else {
             console.log("Could not register webhook!");
             response.send(403).end();
