@@ -1,6 +1,5 @@
 "use strict";
 
-const colors = require('colors');
 const dictionary = require('./dictionary');
 const moment = require('moment');
 
@@ -53,7 +52,7 @@ let currentWeather = response => {
         let location = `${channel.location.city}, ${channel.location.country}`;
         let {text, temp, code} = channel.item.condition;
 
-        return `Right now, ${getPrefix(code)} ${text.toLowerCase().red.bold} in ${location.bold}.  It is ${getFeel(temp).green.bold} at ${temp.red.bold} degrees Celcius.`;
+        return `Right now, ${getPrefix(code)} ${text.toLowerCase()} in ${location}.  It is ${getFeel(temp)} at ${temp} degrees Celcius.`;
     } else {
         return "I don't seem to know anything about this place";
     }
@@ -73,7 +72,7 @@ let forecastWeather = (response, data) => {
         let regEx = new RegExp(data.entities.weather, "i");
         let answer = regEx.test(getForecast.text) ? "Yes" : "No";
 
-        return `${answer}, ${getPrefix(getForecast.code, "future").toLowerCase()} ${getForecast.text.toLowerCase().red.bold} ${data.entities.time.green.bold} in ${location}.`;
+        return `${answer}, ${getPrefix(getForecast.code, "future").toLowerCase()} ${getForecast.text.toLowerCase()} ${data.entities.time} in ${location}.`;
     } else {
         return "What the hell are you talking about?"
     }
