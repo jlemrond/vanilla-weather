@@ -30,4 +30,6 @@ server.post('/', (request, response, next) => {
     })
 });
 
+fb.subscribe();
+
 server.listen(PORT, () => console.log(`Vanilla running on port: ${PORT}`));

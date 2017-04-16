@@ -17,6 +17,23 @@ class FBeamer {
         }
     }
 
+    subscribe() {
+        request({
+            uri: 'https://graph.facebook.com/v2.6/me/subscribed_apps',
+            qs: {
+                access_token: this.PAGE_ACCESS_TOKEN
+            },
+            method: "POST",
+
+        }, (error, response, body) => {
+            if (!error && JSON.parse(body).success) {
+                console.log("Subscribed to Good Vibes.");
+            } else {
+                console.log(error);
+            }
+        })
+    }
+
     registerHook(request, response) {
         let mode = request.query['hub.mode'];
         let verify_token = request.query['hub.verify_token'];
@@ -72,7 +89,7 @@ class FBeamer {
                 });
             });
         })
-        
+
     }
 
     textMessage(id, text) {
