@@ -2,12 +2,15 @@
   "name": "vanilla",
   "version": "1.0.0",
   "description": "Vanilla Command Line Chat Bot",
-  "main": "src/server.js",
   "author": "Jason Lemrond <jason.lemrond@icloud.com>",
   "license": "MIT",
+  "engines": {
+    "node": "7.1.0"
+  },
   "scripts": {
-    "start": "node src/app.js",
-    "go": "nodemon src/app.js"
+    "start": "node src/server.js",
+    "go": "nodemon src/app.js",
+    "serve": "nodemon src/server.js"
   },
   "dependencies": {
     "colors": "^1.1.2",
