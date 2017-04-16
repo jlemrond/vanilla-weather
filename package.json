@@ -2,7 +2,7 @@
   "name": "vanilla",
   "version": "1.0.0",
   "description": "Vanilla Command Line Chat Bot",
-  "main": "src/app.js",
+  "main": "src/server.js",
   "author": "Jason Lemrond <jason.lemrond@icloud.com>",
   "license": "MIT",
   "scripts": {
@@ -13,6 +13,7 @@
     "colors": "^1.1.2",
     "moment": "^2.18.1",
     "nodemon": "^1.11.0",
+    "restify": "^4.3.0",
     "yql": "^1.0.2"
   }
 }
