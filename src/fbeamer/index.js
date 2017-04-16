@@ -79,7 +79,7 @@ class FBeamer {
                 },
                 method: "POST",
                 json: payload
-            }, (error, response) => {
+            }, (error, response, body) => {
                 if (error && response.statusCode !== 200) {
                     reject(error);
                 }
