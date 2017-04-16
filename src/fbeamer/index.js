@@ -1,5 +1,7 @@
 'use strict';
 
+const request = require('request');
+
 class FBeamer {
 
     constructor(config) {
@@ -23,10 +25,11 @@ class FBeamer {
         console.log(mode);
 
         if (mode === "subscribe" && verify_token === this.VERIFY_TOKEN) {
-            return response.end(challenge)
+            console.log("App Registered with Facebook.");
+            return response.send(challenge)
         } else {
             console.log("Could not register webhook!");
-            response.status(403).end();
+            response.send(403).end();
         }
     }
 
@@ -47,6 +50,43 @@ class FBeamer {
             });
         }
         response.send(200);
+    }
+
+    sendMessage(payload) {
+
+        return new Promise((resolve, reject) => {
+            request({
+                uri: "https://graph.facebook.com/v2.6/me/messages",
+                qs: {
+                    access_token: this.PAGE_ACCESS_TOKEN
+                },
+                method: "POST",
+                json: payload
+            }, (error, response) => {
+                if (error && response.statusCode !== 200) {
+                    reject(error);
+                }
+
+                resolve({
+                    messageId: body.message_id
+                });
+            });
+        })
+        
+    }
+
+    textMessage(id, text) {
+        let message = {
+            recipient: {
+                id
+            },
+            message: {
+                text
+            }
+        }
+
+        this.sendMessage(message)
+            .catch(error => console.log(error));
     }
 
 }

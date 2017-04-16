@@ -25,8 +25,8 @@ server.get('/', (request, response, next) => {
 
 // Recieving Post Requests
 server.post('/', (request, response, next) => {
-    fb.incoming(request, response, msg => {
-        console.log(msg);
+    fb.incoming(request, response, message => {
+        fb.textMessage(message.sender, `Hey you just said ${message.message.text}.`)
     })
 });
 
