@@ -13,11 +13,11 @@
     "serve": "nodemon src/server.js"
   },
   "dependencies": {
-    "colors": "^1.1.2",
-    "moment": "^2.18.1",
-    "nodemon": "^1.11.0",
-    "request": "^2.81.0",
-    "restify": "^4.3.0",
-    "yql": "^1.0.2"
+    "colors": "1.1.2",
+    "moment": "2.18.1",
+    "nodemon": "1.11.0",
+    "request": "2.81.0",
+    "restify": "4.3.0",
+    "yql": "1.0.2"
   }
 }
