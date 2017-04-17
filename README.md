@@ -4,7 +4,7 @@ Simple Facebook Chat Bot to check the weather in a desired location.
 
 ## Install and Run
 
-To start the chat bot simply install the dependencies via yarn and use the start command.  The chat bot will run in the same terminal window. This will get the serve up and running but you will need to ingerate with Facebook.
+To start the chat bot simply install the dependencies via yarn and use the start command.  The chat bot will run in the same terminal window. This will get the server up and running but you will need to integrate with Facebook.
 
 ```shell
 $ yarn
@@ -19,9 +19,10 @@ Install Heroku CLI
 $ brew install heroku
 ```
 
-Initiate Heroku Dyno and push to Heroku
+Initiate Heroku Dyno and push to Heroku.  Git will need to be active on your clone.
 
 ```shell
+$ heroku login
 $ heroku create
 $ git push heroku master
 ```
