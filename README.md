@@ -27,7 +27,7 @@ $ heroku create
 $ git push heroku master
 ```
 
-Heroku will suply you with the URL that you will need to provide to Facebook as your end point.  You will need to set up two enviornment variables in Heroku.
+Heroku will supply you with the URL that you will need to provide to Facebook as your end point.  You will need to set up two enviornment variables in Heroku.
 
 ```javascript
 // This will be provided by Facebook from within the developer.facebook.com interface.
